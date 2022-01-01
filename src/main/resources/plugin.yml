@@ -1,0 +1,41 @@
+name: ${project.build.finalName}
+main: com.i0dev.MapPoints.Heart
+version: ${project.version}
+author: i01
+description: Description
+website: ${project.url}
+softdepend:
+  - Factions
+  - PlaceHolderAPI
+depend: []
+commands:
+  MapPoints:
+    aliases:
+      - MapPoint
+    description: The main command for ${project.build.finalName}
+    usage: /MapPoints <help/reload/add/set/remove/get/setFac/addFac/removeFac>
+permissions:
+  MapPoints.reload.cmd:
+    description: Reload config
+    default: op
+  MapPoints.add.cmd:
+    description: Add a new MapPoint
+    default: op
+  MapPoints.set.cmd:
+    description: Set a MapPoint
+    default: op
+  MapPoints.remove.cmd:
+    description: Remove a MapPoint
+    default: op
+  MapPoints.get.cmd:
+    description: Get a MapPoint
+    default: op
+  MapPoints.setFac.cmd:
+    description: Set a Faction
+    default: op
+  MapPoints.addFac.cmd:
+    description: Add a Faction
+    default: op
+  MapPoints.removeFac.cmd:
+    description: Remove a Faction
+    default: op
