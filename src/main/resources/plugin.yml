@@ -1,0 +1,50 @@
+name: ${project.name}
+version: ${project.version}
+main: com.i0dev.mappoints.MapPointsPlugin
+website: ${project.url}
+authors: [ i01 ]
+depend: [ MassiveCore ]
+description: ${project.description}
+api-version: 1.15
+permissions:
+  mappoints.basecommand: { description: mappoints basecommand, default: false }
+  mappoints.add: { description: add a point, default: false }
+  mappoints.add.player: { description: add a point for a player, default: false }
+  mappoints.add.faction: { description: add a point for a faction, default: false }
+  mappoints.remove: { description: remove a point, default: false }
+  mappoints.remove.player: { description: remove a point for a player, default: false }
+  mappoints.remove.faction: { description: remove a point for a faction, default: false }
+  mappoints.set: { description: set a point, default: false }
+  mappoints.set.player: { description: set a point for a player, default: false }
+  mappoints.set.faction: { description: set a point for a faction, default: false }
+  mappoints.get: { description: get a point, default: false }
+  mappoints.get.player: { description: get a point for a player, default: false }
+  mappoints.get.faction: { description: get a point for a faction, default: false }
+  mappoints.version: { description: check version, default: false }
+  mappoints.*:
+    mappoints.basecommand: true
+    mappoints.add: true
+    mappoints.add.player: true
+    mappoints.add.faction: true
+    mappoints.remove: true
+    mappoints.remove.player: true
+    mappoints.remove.faction: true
+    mappoints.set: true
+    mappoints.set.player: true
+    mappoints.set.faction: true
+    mappoints.get: true
+    mappoints.get.player: true
+    mappoints.get.faction: true
+    mappoints.version: true
+  mappoints.kit.op:
+    default: op
+    children:
+      mappoints.*: true
+  mappoints.kit.rank0:
+    default: false
+    children:
+      mappoints.basecommand: true
+  mappoints.kit.default:
+    default: true
+    children:
+      mappoints.kit.rank0: true
