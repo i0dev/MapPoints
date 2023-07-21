@@ -5,7 +5,7 @@ website: ${project.url}
 authors: [ i01 ]
 depend: [ MassiveCore ]
 description: ${project.description}
-api-version: 1.15
+api-version: 1.20
 permissions:
   mappoints.basecommand: { description: mappoints basecommand, default: false }
   mappoints.add: { description: add a point, default: false }
